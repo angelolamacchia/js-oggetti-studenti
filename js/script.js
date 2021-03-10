@@ -35,6 +35,7 @@ studenti e stampare per ognuno nome e cognome*/
 
     for (var key in students) {
         console.log(students[key].nome + " " + students[key].cognome);
+        $(".listaStudenti").append("<li>" + students[key].nome + " " + students[key].cognome + "</li>");
     }
 
 /*- Dare la possibilità all’utente attraverso 3 prompt di
@@ -58,11 +59,12 @@ nell’ordine: nome, cognome e età. */
 
     //inserisco il nuovo studente nell'array studenti
     students.push(newStudent);
+    console.log(newStudent);
 
     // for (var key in students) {
     //     console.log(students[key]);
     // }
     
     console.log(students[3].nome + " " + students[3].cognome);
-      
+    $(".listaStudenti").append("<li>" + students[3].nome + " " + students[3].cognome + "</li>");
 });

@@ -6,7 +6,6 @@
 }
 
 .container {
-    height: 300px;
     background-color: rgb(54, 54, 54);
     padding: 50px;
     color: white;
@@ -18,4 +17,14 @@
 
 .listaStudenti {
     margin: 0 auto;
+}
+
+#aggiungiStudente {
+    background-color: rgb(122, 172, 99);
+    width: 120px;
+    height: 100px;
+}
+#aggiungiStudente .fas {
+    font-size: 80px;
+    color: white;
 }

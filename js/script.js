@@ -41,30 +41,32 @@ studenti e stampare per ognuno nome e cognome*/
 /*- Dare la possibilità all’utente attraverso 3 prompt di
 aggiungere un nuovo oggetto studente inserendo
 nell’ordine: nome, cognome e età. */
-    var newName = prompt("Inserire nome");
-    //il nome/cognome inserito avrà solo la prima lettera maiuscola
-    newName = newName.charAt(0).toUpperCase() + newName.slice(1).toLowerCase();
+    var i=2;
+    $("#aggiungiStudente").click(function(){
+        //il nome/cognome inserito avrà solo la prima lettera maiuscola
+        var newName = prompt("Inserire nome");
+        newName = newName.charAt(0).toUpperCase() + newName.slice(1).toLowerCase();
 
-    var newSurname = prompt("Inserire cognome");
-    newSurname = newSurname.charAt(0).toUpperCase() + newSurname.slice(1).toLowerCase();
+        var newSurname = prompt("Inserire cognome");
+        newSurname = newSurname.charAt(0).toUpperCase() + newSurname.slice(1).toLowerCase();
 
-    var newAge = parseInt(prompt("Inserire età"));
+        var newAge = parseInt(prompt("Inserire età"));
 
-    //oggetto nuovo studente
-    var newStudent = {
-        "nome": newName,
-        "cognome": newSurname,
-        "età": newAge,
-    };
-
-    //inserisco il nuovo studente nell'array studenti
-    students.push(newStudent);
-    console.log(newStudent);
+        //oggetto nuovo studente
+        var newStudent = {
+            "nome": newName,
+            "cognome": newSurname,
+            "età": newAge,
+        };
+        i += 1;
+        //inserisco il nuovo studente nell'array studenti
+        students.push(newStudent);
+        console.log(students[i].nome + " " + students[i].cognome);
+        $(".listaStudenti").append("<li>" + students[i].nome + " " + students[i].cognome + "</li>");
+    });
 
     // for (var key in students) {
     //     console.log(students[key]);
     // }
     
-    console.log(students[3].nome + " " + students[3].cognome);
-    $(".listaStudenti").append("<li>" + students[3].nome + " " + students[3].cognome + "</li>");
 });

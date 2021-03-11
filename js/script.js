@@ -58,11 +58,12 @@ nell’ordine: nome, cognome e età. */
             "cognome": newSurname,
             "età": newAge,
         };
-        i += 1;
+        i++;
         //inserisco il nuovo studente nell'array studenti
         students.push(newStudent);
         console.log(students[i].nome + " " + students[i].cognome);
         $(".listaStudenti").append("<li>" + students[i].nome + " " + students[i].cognome + "</li>");
+        // console.log(students);
     });
 
     // for (var key in students) {
